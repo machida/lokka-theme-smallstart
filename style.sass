@@ -79,8 +79,8 @@ table
   margin: 0
   width: 100%
   box-shadow: inset #ccc 0 1px 1px, #fff 0 1px 1px
+  -webkit-box-shadow: inset #ccc 0 1px 1px, #fff 0 1px 1px
   line-height: 24px
-  border: #eee 1px solid
   font-size: $m
 =article-img
   img
@@ -89,6 +89,10 @@ table
     @media screen and (max-device-width: 480px)
       width: 100%
       border: none
+=break
+  word-break: break-all
+  line-break: strict
+  word-wrap: break-word
 
 $main-width: 560px
 $sub-width: 140px
@@ -98,14 +102,14 @@ $title-width: 480px
 $article-padding: 28px
 $white: #fff
 $dark-white: #f7f7f7
-$light-gray: #f2f2f2
+$light-gray: #dde4e5
 $gray: #c7c7c7
-$black: #000
+$black: #291107
 $light-black: #666
 $blue: #00c0f0
 $dark-blue: #00439f
 $accent: #d31893
-$exl: 34px
+$exl: 38px
 $lll: 28px
 $ll: 20px
 $l: 18px
@@ -119,14 +123,17 @@ $img-border-width: 8px
 $button-radius: 4px
 
 
+html
+  background: url(images/wood.gif) repeat-x
+  padding: 8px 0 0 0
 
 body
   background-color: $dark-white
   color: #454545
   background-image: url(images/body.gif)
-  border-top-width: 8px
+  border-top-width: 1px
   border-top-style: solid
-  border-top-color: $black
+  border-top-color: $white
   letter-spacing: 0.1em
   @media screen and (max-device-width: 480px)
     padding: 0
@@ -157,6 +164,7 @@ body
         display: block
         float: left
         font-weight: bold
+        text-shadow: $white 0 1px 0
         &:link, &:visited
           background: inherit
           opacity: 1
@@ -267,7 +275,7 @@ body
       padding: $article-padding $article-padding 0 $article-padding
       +clearfix
       @media screen and (max-device-width: 480px)
-        word-break: break-all
+        +break
         line-height: 1.4
         padding: 25px 10px
       h2
@@ -278,7 +286,7 @@ body
       p
         line-height: 1.8
         &.break
-          word-break: break-all
+          +break
           line-height: 1.4
       ol,ul
         list-style-position: outside
@@ -310,7 +318,7 @@ body
         line-height: 1.6      
       blockquote
         background-color: $dark-white
-        background-image: url(images/body.gif)
+        background-image: url(images/quote.gif)
         display: block
         padding: 0px 25px 0 65px
         margin: 0 0 2em 0
@@ -338,6 +346,14 @@ body
         +article-img
       table
         font-size: $m
+      @media screen and (max-device-width: 480px)
+        pre
+          background: $black
+          display: block
+          width: 92%
+          padding: 10px
+          color: #1cd620
+          +break
     .footer
       padding: $article-padding - 4
       border-top: $ariticle-border
@@ -417,15 +433,18 @@ body
         background: linear-gradient(top, #00c0f0 0%,#00aed9 100%)
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c0f0', endColorstr='#00aed9',GradientType=0 )
         box-shadow: inset #1bcffc 0 0 3px, #999 0 1px 1px
+        -webkit-box-shadow: inset #1bcffc 0 0 3px, #999 0 1px 1px
         text-shadow: #0092b6 0 -1px 0
         border: #01afdb solid 1px
 
 .breadcrumbs
-  background: $black
+  background: url(images/wood.gif)
   font-size: $ss
   margin-bottom: 35px
   padding: 4px
   clear: both
+  box-shadow: $white 0 1px 0, inset $black 0 1px 2px
+  -webkit-box-shadow: $white 0 1px 0, inset $black 0 1px 2px
   @media screen and (max-device-width: 480px)
     margin-bottom: 20px
   li
@@ -475,12 +494,11 @@ body.about
   >div
     margin: 0 0 25px 0
     @media screen and (max-device-width: 480px)
-      div
-        border: $gray solid 1px
-        background: $white
-        margin: 0 0 25px 0
-        padding: 12px
-        +clearfix
+      border: $gray solid 1px
+      background: $white
+      margin: 0 0 25px 0
+      padding: 12px
+      +clearfix
   h2
     font-family: 'Niconne', cursive
     font-size: $l

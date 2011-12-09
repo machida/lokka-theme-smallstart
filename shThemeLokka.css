@@ -1,0 +1,363 @@
+/*
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses. */
+#main .article .syntaxhighlighter {
+  width: 100%;
+  margin: 0 0 2.2em 0;
+  position: relative;
+  overflow: auto;
+  background-color: #1b2426;
+  padding: 8px 0; }
+  @media screen and (max-device-width: 480px) {
+    #main .article .syntaxhighlighter {
+      font-size: 10px !important; } }
+  #main .article .syntaxhighlighter a, #main .article .syntaxhighlighter div, #main .article .syntaxhighlighter code {
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    background: none;
+    border: 0;
+    bottom: auto;
+    float: none;
+    height: auto;
+    left: auto;
+    line-height: 1.4em;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    position: static;
+    right: auto;
+    text-align: left;
+    top: auto;
+    vertical-align: baseline;
+    width: auto;
+    box-sizing: content-box;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    font-weight: normal;
+    font-style: normal;
+    min-height: inherit;
+    min-height: auto; }
+    @media screen and (max-device-width: 480px) {
+      #main .article .syntaxhighlighter a, #main .article .syntaxhighlighter div, #main .article .syntaxhighlighter code {
+        font-size: 10px !important; } }
+  #main .article .syntaxhighlighter table {
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    background: none;
+    border: 0;
+    bottom: auto;
+    float: none;
+    height: auto;
+    left: auto;
+    line-height: 1.4em;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    position: static;
+    right: auto;
+    text-align: left;
+    top: auto;
+    vertical-align: baseline;
+    width: auto;
+    box-sizing: content-box;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    font-weight: normal;
+    font-style: normal;
+    min-height: inherit;
+    min-height: auto; }
+    @media screen and (max-device-width: 480px) {
+      #main .article .syntaxhighlighter table {
+        font-size: 10px !important; } }
+    #main .article .syntaxhighlighter table td, #main .article .syntaxhighlighter table tr, #main .article .syntaxhighlighter table tbody, #main .article .syntaxhighlighter table thead, #main .article .syntaxhighlighter table caption {
+      -moz-border-radius: 0 0 0 0;
+      -webkit-border-radius: 0 0 0 0;
+      background: none;
+      border: 0;
+      bottom: auto;
+      float: none;
+      height: auto;
+      left: auto;
+      line-height: 1.4em;
+      margin: 0;
+      outline: 0;
+      overflow: visible;
+      padding: 0;
+      position: static;
+      right: auto;
+      text-align: left;
+      top: auto;
+      vertical-align: baseline;
+      width: auto;
+      box-sizing: content-box;
+      font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+      font-weight: normal;
+      font-style: normal;
+      min-height: inherit;
+      min-height: auto; }
+      @media screen and (max-device-width: 480px) {
+        #main .article .syntaxhighlighter table td, #main .article .syntaxhighlighter table tr, #main .article .syntaxhighlighter table tbody, #main .article .syntaxhighlighter table thead, #main .article .syntaxhighlighter table caption {
+          font-size: 10px !important; } }
+  #main .article .syntaxhighlighter textarea {
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    background: none;
+    border: 0;
+    bottom: auto;
+    float: none;
+    height: auto;
+    left: auto;
+    line-height: 1.4em;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    position: static;
+    right: auto;
+    text-align: left;
+    top: auto;
+    vertical-align: baseline;
+    width: auto;
+    box-sizing: content-box;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    font-weight: normal;
+    font-style: normal;
+    min-height: inherit;
+    min-height: auto; }
+  @media screen and (max-device-width: 480px) {
+    #main .article .syntaxhighlighter {
+      overflow: scroll !important; } }
+  #main .article .syntaxhighlighter.source {
+    overflow: hidden; }
+  #main .article .syntaxhighlighter .bold {
+    font-weight: bold; }
+  #main .article .syntaxhighlighter .italic {
+    font-style: italic; }
+  #main .article .syntaxhighlighter .line {
+    white-space: pre; }
+  #main .article .syntaxhighlighter table {
+    width: 100%; }
+    #main .article .syntaxhighlighter table caption {
+      text-align: left;
+      padding: 0.5em 0 0.5em 1em; }
+    #main .article .syntaxhighlighter table td.code {
+      width: 100%; }
+      @media screen and (max-device-width: 480px) {
+        #main .article .syntaxhighlighter table td.code {
+          font-size: 10px !important;
+          width: 200px !important;
+          word-break: break-all !important; } }
+      #main .article .syntaxhighlighter table td.code .container {
+        position: relative; }
+        #main .article .syntaxhighlighter table td.code .container textarea {
+          box-sizing: border-box;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
+          background: white;
+          padding-left: 1em;
+          overflow: hidden;
+          white-space: pre; }
+    #main .article .syntaxhighlighter table td.gutter .line {
+      text-align: right;
+      padding: 0 0.5em 0 1em; }
+    @media screen and (max-device-width: 480px) {
+      #main .article .syntaxhighlighter table td.gutter {
+        display: none; } }
+    #main .article .syntaxhighlighter table td.code .line {
+      padding: 0 1em; }
+      @media screen and (max-device-width: 480px) {
+        #main .article .syntaxhighlighter table td.code .line {
+          font-size: 10px !important; } }
+  #main .article .syntaxhighlighter.nogutter td.code .container textarea, #main .article .syntaxhighlighter.nogutter td.code .line {
+    padding-left: 0em; }
+  #main .article .syntaxhighlighter.show {
+    display: block; }
+  #main .article .syntaxhighlighter.collapsed table {
+    display: none; }
+  #main .article .syntaxhighlighter.collapsed .toolbar {
+    padding: 0.1em 0.8em 0em 0.8em;
+    position: static;
+    width: auto;
+    height: auto; }
+    @media screen and (max-device-width: 480px) {
+      #main .article .syntaxhighlighter.collapsed .toolbar {
+        font-size: 10px !important; } }
+    #main .article .syntaxhighlighter.collapsed .toolbar span {
+      display: inline;
+      margin-right: 1em; }
+      #main .article .syntaxhighlighter.collapsed .toolbar span a {
+        padding: 0;
+        display: none; }
+        #main .article .syntaxhighlighter.collapsed .toolbar span a.expandSource {
+          display: inline; }
+  #main .article .syntaxhighlighter .toolbar {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 11px;
+    height: 11px;
+    font-size: 10px;
+    z-index: 10; }
+    #main .article .syntaxhighlighter .toolbar span.title {
+      display: inline; }
+    #main .article .syntaxhighlighter .toolbar a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding-top: 1px; }
+      #main .article .syntaxhighlighter .toolbar a.expandSource {
+        display: none; }
+  #main .article .syntaxhighlighter.ie {
+    font-size: 0.9em;
+    padding: 1px 0 1px 0; }
+    #main .article .syntaxhighlighter.ie .toolbar {
+      line-height: 8px; }
+      #main .article .syntaxhighlighter.ie .toolbar a {
+        padding-top: 0px; }
+  #main .article .syntaxhighlighter.printing .line.alt1 .content, #main .article .syntaxhighlighter.printing .line.alt2 .content {
+    background: none; }
+  #main .article .syntaxhighlighter.printing .line.highlighted .number, #main .article .syntaxhighlighter.printing .line.highlighted.alt1 .content, #main .article .syntaxhighlighter.printing .line.highlighted.alt2 .content {
+    background: none; }
+  #main .article .syntaxhighlighter.printing .line .number {
+    color: #bbbbbb; }
+  #main .article .syntaxhighlighter.printing .line .content {
+    color: black; }
+  #main .article .syntaxhighlighter.printing .toolbar {
+    display: none; }
+  #main .article .syntaxhighlighter.printing a {
+    text-decoration: none; }
+  #main .article .syntaxhighlighter.printing .plain {
+    color: black; }
+    #main .article .syntaxhighlighter.printing .plain a {
+      color: black; }
+  #main .article .syntaxhighlighter.printing .comments {
+    color: #008200; }
+    #main .article .syntaxhighlighter.printing .comments a {
+      color: #008200; }
+  #main .article .syntaxhighlighter.printing .string {
+    color: blue; }
+    #main .article .syntaxhighlighter.printing .string a {
+      color: blue; }
+  #main .article .syntaxhighlighter.printing .keyword {
+    color: #006699;
+    font-weight: bold; }
+  #main .article .syntaxhighlighter.printing .preprocessor {
+    color: gray; }
+  #main .article .syntaxhighlighter.printing .variable {
+    color: #aa7700; }
+  #main .article .syntaxhighlighter.printing .value {
+    color: #009900; }
+  #main .article .syntaxhighlighter.printing .functions {
+    color: #ff1493; }
+  #main .article .syntaxhighlighter.printing .constants {
+    color: #0066cc; }
+  #main .article .syntaxhighlighter.printing .script {
+    font-weight: bold; }
+  #main .article .syntaxhighlighter.printing .color1 {
+    color: gray; }
+    #main .article .syntaxhighlighter.printing .color1 a {
+      color: gray; }
+  #main .article .syntaxhighlighter.printing .color2 {
+    color: #ff1493; }
+    #main .article .syntaxhighlighter.printing .color2 a {
+      color: #ff1493; }
+  #main .article .syntaxhighlighter.printing .color3 {
+    color: red; }
+    #main .article .syntaxhighlighter.printing .color3 a {
+      color: red; }
+  #main .article .syntaxhighlighter.printing .break {
+    color: black; }
+    #main .article .syntaxhighlighter.printing .break a {
+      color: black; }
+  #main .article .syntaxhighlighter .line.alt1, #main .article .syntaxhighlighter .line.alt2 {
+    background-color: #1b2426; }
+  #main .article .syntaxhighlighter .line.highlighted.alt1, #main .article .syntaxhighlighter .line.highlighted.alt2 {
+    background-color: #323e41; }
+  #main .article .syntaxhighlighter .line.highlighted.number {
+    color: #b9bdb6; }
+  #main .article .syntaxhighlighter table caption {
+    color: #b9bdb6; }
+  #main .article .syntaxhighlighter .gutter {
+    color: #afafaf; }
+    #main .article .syntaxhighlighter .gutter .line {
+      border-right: 3px solid #435a5f; }
+      #main .article .syntaxhighlighter .gutter .line.highlighted {
+        background-color: #435a5f;
+        color: #1b2426; }
+  #main .article .syntaxhighlighter.printing .line .content {
+    border: none; }
+  #main .article .syntaxhighlighter.collapsed {
+    overflow: visible; }
+    #main .article .syntaxhighlighter.collapsed .toolbar {
+      color: #5ba1cf;
+      background: black;
+      border: 1px solid #435a5f; }
+      #main .article .syntaxhighlighter.collapsed .toolbar a {
+        color: #5ba1cf; }
+        #main .article .syntaxhighlighter.collapsed .toolbar a:hover {
+          color: #5ce638; }
+  #main .article .syntaxhighlighter .toolbar {
+    color: white;
+    background: #435a5f;
+    border: none;
+    display: none; }
+    #main .article .syntaxhighlighter .toolbar a {
+      color: white; }
+      #main .article .syntaxhighlighter .toolbar a:hover {
+        color: #e0e8ff; }
+  #main .article .syntaxhighlighter .plain {
+    color: #b9bdb6; }
+    #main .article .syntaxhighlighter .plain a {
+      color: #b9bdb6; }
+  #main .article .syntaxhighlighter .comments {
+    color: #878a85; }
+    #main .article .syntaxhighlighter .comments a {
+      color: #878a85; }
+  #main .article .syntaxhighlighter .string {
+    color: #5ce638; }
+    #main .article .syntaxhighlighter .string a {
+      color: #5ce638; }
+  #main .article .syntaxhighlighter .keyword {
+    color: #5ba1cf; }
+  #main .article .syntaxhighlighter .preprocessor {
+    color: #435a5f; }
+  #main .article .syntaxhighlighter .variable {
+    color: #ffaa3e; }
+  #main .article .syntaxhighlighter .value {
+    color: #009900; }
+  #main .article .syntaxhighlighter .functions {
+    color: #ffaa3e; }
+  #main .article .syntaxhighlighter .constants {
+    color: #e0e8ff; }
+  #main .article .syntaxhighlighter .script {
+    font-weight: bold;
+    color: #5ba1cf;
+    background-color: none; }
+  #main .article .syntaxhighlighter .color1 {
+    color: #e0e8ff; }
+    #main .article .syntaxhighlighter .color1 a {
+      color: #e0e8ff; }
+  #main .article .syntaxhighlighter .color2 {
+    color: white; }
+    #main .article .syntaxhighlighter .color2 a {
+      color: white; }
+  #main .article .syntaxhighlighter .color3 {
+    color: #ffaa3e; }
+    #main .article .syntaxhighlighter .color3 a {
+      color: #ffaa3e; }

@@ -39,13 +39,17 @@ table {
     display: table;
     clear: both; }
 
+html {
+  background: url(images/wood.gif) repeat-x;
+  padding: 8px 0 0 0; }
+
 body {
   background-color: #f7f7f7;
   color: #454545;
   background-image: url(images/body.gif);
-  border-top-width: 8px;
+  border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: black;
+  border-top-color: white;
   letter-spacing: 0.1em; }
   @media screen and (max-device-width: 480px) {
     body {
@@ -82,15 +86,16 @@ body {
     #header {
       margin: 20px 0 10px 0; } }
   #header .header h1 a {
-    color: black;
+    color: #291107;
     text-decoration: none;
     font-family: serif;
-    font-size: 34px;
+    font-size: 38px;
     letter-spacing: 0;
-    line-height: 34px;
+    line-height: 38px;
     display: block;
     float: left;
-    font-weight: bold; }
+    font-weight: bold;
+    text-shadow: white 0 1px 0; }
     #header .header h1 a:link, #header .header h1 a:visited {
       background: inherit;
       opacity: 1; }
@@ -116,7 +121,7 @@ body {
         float: none; } }
     #header .nav li {
       display: inline;
-      line-height: 34px; }
+      line-height: 38px; }
     #header .nav a {
       text-decoration: none;
       display: block;
@@ -125,7 +130,7 @@ body {
       #header .nav a:before {
         content: "+"; }
       #header .nav a:link, #header .nav a:visited {
-        color: black; }
+        color: #291107; }
       #header .nav a:hover, #header .nav a:active {
         color: #d31893; }
 
@@ -162,7 +167,7 @@ body {
       margin: 0 0 35px 0; } }
   #main .article .header {
     border-bottom: #c7c7c7 solid 1px;
-    background-color: #f2f2f2; }
+    background-color: #dde4e5; }
     #main .article .header h1 {
       line-height: 1.5;
       font-weight: bold;
@@ -178,7 +183,7 @@ body {
           padding: 4px 10px;
           line-height: 1.3; } }
       #main .article .header h1 a {
-        color: black;
+        color: #291107;
         text-decoration: none; }
     #main .article .header .title {
       float: right;
@@ -227,17 +232,21 @@ body {
     @media screen and (max-device-width: 480px) {
       #main .article .body {
         word-break: break-all;
+        line-break: strict;
+        word-wrap: break-word;
         line-height: 1.4;
         padding: 25px 10px; } }
     #main .article .body h2 {
       font-size: 18px;
-      border-bottom: #f2f2f2 solid 3px;
+      border-bottom: #dde4e5 solid 3px;
       margin: 0 0 25px 0;
       line-height: 1.5; }
     #main .article .body p {
       line-height: 1.8; }
       #main .article .body p.break {
         word-break: break-all;
+        line-break: strict;
+        word-wrap: break-word;
         line-height: 1.4; }
     #main .article .body ol, #main .article .body ul {
       list-style-position: outside;
@@ -271,7 +280,7 @@ body {
       line-height: 1.6; }
     #main .article .body blockquote {
       background-color: #f7f7f7;
-      background-image: url(images/body.gif);
+      background-image: url(images/quote.gif);
       display: block;
       padding: 0px 25px 0 65px;
       margin: 0 0 2em 0;
@@ -313,6 +322,16 @@ body {
           border: none; } }
     #main .article .body table {
       font-size: 13px; }
+    @media screen and (max-device-width: 480px) {
+      #main .article .body pre {
+        background: #291107;
+        display: block;
+        width: 92%;
+        padding: 10px;
+        color: #1cd620;
+        word-break: break-all;
+        line-break: strict;
+        word-wrap: break-word; } }
   #main .article .footer {
     padding: 24px;
     border-top: #c7c7c7 solid 1px;
@@ -389,8 +408,8 @@ body {
       margin: 0;
       width: 100%;
       box-shadow: inset #cccccc 0 1px 1px, white 0 1px 1px;
+      -webkit-box-shadow: inset #cccccc 0 1px 1px, white 0 1px 1px;
       line-height: 24px;
-      border: #eeeeee 1px solid;
       font-size: 13px; }
     #main #comment_wrapper p textarea {
       border-radius: 4px;
@@ -402,8 +421,8 @@ body {
       margin: 0;
       width: 100%;
       box-shadow: inset #cccccc 0 1px 1px, white 0 1px 1px;
+      -webkit-box-shadow: inset #cccccc 0 1px 1px, white 0 1px 1px;
       line-height: 24px;
-      border: #eeeeee 1px solid;
       font-size: 13px;
       width: 100%;
       line-height: 1.5;
@@ -426,15 +445,18 @@ body {
       background: linear-gradient(top, #00c0f0 0%, #00aed9 100%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00c0f0', endColorstr='#00aed9',GradientType=0 );
       box-shadow: inset #1bcffc 0 0 3px, #999999 0 1px 1px;
+      -webkit-box-shadow: inset #1bcffc 0 0 3px, #999999 0 1px 1px;
       text-shadow: #0092b6 0 -1px 0;
       border: #01afdb solid 1px; }
 
 .breadcrumbs {
-  background: black;
+  background: url(images/wood.gif);
   font-size: 10px;
   margin-bottom: 35px;
   padding: 4px;
-  clear: both; }
+  clear: both;
+  box-shadow: white 0 1px 0, inset #291107 0 1px 2px;
+  -webkit-box-shadow: white 0 1px 0, inset #291107 0 1px 2px; }
   @media screen and (max-device-width: 480px) {
     .breadcrumbs {
       margin-bottom: 20px; } }
@@ -479,16 +501,16 @@ body.about #main .article .header {
   #sub > div {
     margin: 0 0 25px 0; }
     @media screen and (max-device-width: 480px) {
-      #sub > div div {
+      #sub > div {
         border: #c7c7c7 solid 1px;
         background: white;
         margin: 0 0 25px 0;
         padding: 12px;
         zoom: 1; }
-        #sub > div div:before {
+        #sub > div:before {
           content: "";
           display: table; }
-        #sub > div div:after {
+        #sub > div:after {
           content: "";
           display: table;
           clear: both; } }
@@ -527,8 +549,8 @@ body.about #main .article .header {
     margin: 0;
     width: 100%;
     box-shadow: inset #cccccc 0 1px 1px, white 0 1px 1px;
+    -webkit-box-shadow: inset #cccccc 0 1px 1px, white 0 1px 1px;
     line-height: 24px;
-    border: #eeeeee 1px solid;
     font-size: 13px;
     width: 100%; }
 
@@ -542,12 +564,12 @@ body.about #main .article .header {
     width: 560px;
     margin: 0 auto;
     text-align: center;
-    color: black; }
+    color: #291107; }
     @media screen and (max-device-width: 480px) {
       #footer .body {
         width: 100%; } }
     #footer .body a {
-      color: black; }
+      color: #291107; }
       #footer .body a:link, #footer .body a:visited {
         text-decoration: none; }
       #footer .body a:hover, #footer .body a:active {

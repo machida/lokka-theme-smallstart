@@ -1,0 +1,48 @@
+.section.article
+  .header.clearfix
+    .title
+      %h1= @entry.title
+    - unless page?
+      .date
+        %ul
+          %li.month= @entry.created_at.strftime("%b")
+          %li.day= @entry.created_at.day
+          %li.year= @entry.created_at.year
+  .body.clearfix
+    = @entry.body
+    - if logged_in?
+      %p
+        %a{:href => @entry.edit_link}= t('edit')
+- unless page?
+  #comment_wrapper
+    - if @entry.comments.size > 0
+      %h2
+        = t('comments')
+      %ul#comments
+        - @entry.comments.reverse.each do |comment|
+          %li.comment.clearfix{:id => "comment-#{comment.id}"}
+            %h3.commenter
+              %span.name
+                = link_to comment.name, comment.homepage, :unless => comment.homepage.blank?
+              %span.date
+                = l comment.created_at, :format => :long
+            %p
+              = hbr comment.body
+    #comment_form
+      %form#comment_form{:action => @post.link, :method => "post"}
+        :javascript
+          //
+            document.write('<input type="hidden" name="check" value="check" />');
+          //
+              %input{:name => "check", :type => "hidden", :value => "check"}
+          %p.name
+            %label{:for => "comment_name"} Name
+            %input#comment_name{:name => "comment[name]", :type => "text"}
+          %p.url
+            %label{:for => "comment_homepage"} URL
+            %span (option)
+            %input#comment_homepage{:name => "comment[homepage]", :type => "text"}
+          %p
+            %textarea#comment_body{:cols => "40", :name => "comment[body]", :rows => "10"}
+          %p.submit
+            %input.button{:type => "submit", :value => "Commment"}

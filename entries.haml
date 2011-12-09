@@ -1,0 +1,36 @@
+- unless index?
+  - if category?
+    %h1.entries_title
+      Category : #{@title}
+  - elsif tag?
+    %h2.entries_title
+      Tag : #{@title}
+  - else
+    %h1.entries_title= @title
+.section.articles
+  - @posts.each do |post|
+    .section.article
+      .header.clearfix
+        .title
+          %h1
+            %a{:href => post.link}= post.title
+        .date
+          %ul
+            %li.month= post.created_at.strftime("%b")
+            %li.day= post.created_at.day
+            %li.year= post.created_at.year
+      .body.clearfix
+        = post.body
+        - if logged_in?
+          %p.edit
+            %a{:href => post.edit_link}= t('edit')
+      .footer
+        %p= link_to "#{t('comments')}(#{post.comments.size})", "#{post.link}#comment_wrapper"
+  .pager
+    %ul
+      - if @posts.pager.previous_page
+        %li.previous
+          %a{:href => "?page=#{@posts.pager.previous_page}"} Newer
+      - if @posts.pager.next_page
+        %li.next
+          %a{:href => "?page=#{@posts.pager.next_page}"} Older
