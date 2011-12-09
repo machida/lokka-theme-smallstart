@@ -1,0 +1,527 @@
+@charset "UTF-8"
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:after
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+.clearfix
+  &:before
+    content: ""
+    display: table
+  &:after
+    content: ""
+    display: table
+    clear: both
+  zoom: 1
+
+=clearfix
+  &:before
+    content: ""
+    display: table
+  &:after
+    content: ""
+    display: table
+    clear: both
+  zoom: 1
+
+=site-width
+  width: $main-width
+  @media screen and (max-device-width: 480px)
+    width: 100%
+=main
+  +site-width
+  float: left
+  @media screen and (max-device-width: 480px)
+    float: none
+=text-link
+  &:link,
+  &:visited
+    text-decoration: none
+  &:hover,
+  &:active
+    text-decoration: underline
+=form-input
+  border-radius: $button-radius
+  -webkit-border-radius: $button-radius
+  -moz-border-radius: $button-radius
+  -o-border-radius: $button-radius
+  border: none
+  padding: 0
+  margin: 0
+  width: 100%
+  box-shadow: inset #ccc 0 1px 1px, #fff 0 1px 1px
+  line-height: 24px
+  border: #eee 1px solid
+  font-size: $m
+=article-img
+  img
+    border: $dark-white solid $img-border-width
+    max-width: $main-width - ( ( $article-padding * 2 ) + ( 2 * $img-border-width ) + 2px )
+    @media screen and (max-device-width: 480px)
+      width: 100%
+      border: none
+
+$main-width: 560px
+$sub-width: 140px
+$wrap-width: 780px
+$wrap-padding: 0 0 0 200px
+$title-width: 480px
+$article-padding: 28px
+$white: #fff
+$dark-white: #f7f7f7
+$light-gray: #f2f2f2
+$gray: #c7c7c7
+$black: #000
+$light-black: #666
+$blue: #00c0f0
+$dark-blue: #00439f
+$accent: #d31893
+$exl: 34px
+$lll: 28px
+$ll: 20px
+$l: 18px
+$ml: 16px
+$m: 13px
+$sm: 12px
+$s: 11px
+$ss: 10px
+$ariticle-border: $gray solid 1px
+$img-border-width: 8px 
+$button-radius: 4px
+
+
+
+body
+  background-color: $dark-white
+  color: #454545
+  background-image: url(images/body.gif)
+  border-top-width: 8px
+  border-top-style: solid
+  border-top-color: $black
+  letter-spacing: 0.1em
+  @media screen and (max-device-width: 480px)
+    padding: 0
+
+#wrap
+  padding: $wrap-padding
+  width: $wrap-width
+  margin: 0 auto
+  +clearfix
+  @media screen and (max-device-width: 480px)
+    padding: 0
+    width: 90%
+
+#header
+  margin: 60px 0 40px 0
+  +clearfix
+  @media screen and (max-device-width: 480px)
+    margin: 20px 0 10px 0
+  .header
+    h1
+      a
+        color: $black
+        text-decoration: none
+        font-family: serif
+        font-size: $exl
+        letter-spacing: 0
+        line-height: $exl
+        display: block
+        float: left
+        font-weight: bold
+        &:link, &:visited
+          background: inherit
+          opacity: 1
+        &:hover, &:active
+          background: inherit
+          opacity: 0.8
+        @media screen and (max-device-width: 480px)
+          font-size: $lll
+          display: block
+          float: none
+    p
+      color: $white
+      font-size: $s
+      letter-spacing: 0
+  .nav
+    font-size: $ss
+    float: left
+    padding: 0 0 0 20px
+    @media screen and (max-device-width: 480px)
+      padding: 0
+      float: none
+    li
+      display: inline
+      line-height: $exl
+    a 
+      text-decoration: none
+      display: block
+      float: left
+      padding: 0 10px
+      &:before
+        content: "+"
+      &:link,
+      &:visited
+        color: $black
+      &:hover,
+      &:active
+        color: $accent
+
+#body
+  +clearfix
+  +main
+  .entries_title
+    font-size: $l
+    display: block
+    margin: 0 0 28px 0
+    font-weight: bold
+    line-height: 1.5
+    font-family: serif
+
+#main
+  .article
+    border: 1px solid $gray
+    margin: 0 0 65px 0
+    @media screen and (max-device-width: 480px)
+      margin: 0 0 35px 0
+    .header
+      border-bottom: $ariticle-border
+      background-color: $light-gray
+      h1
+        line-height: 1.5
+        font-weight: bold
+        font-size: $ll
+        padding: 12px 22px
+        border-left: $ariticle-border
+        min-height: 60px
+        display: block
+        font-family: serif
+        @media screen and (max-device-width: 480px)
+          font-size: $ml
+          padding: 4px 10px
+          line-height: 1.3
+        a
+          color: $black
+          text-decoration: none
+      .title
+        float: right
+        width: $title-width
+        background-color: $white
+        @media screen and (max-device-width: 480px)
+          width: 85%
+      .date
+        float: left
+        width: $main-width - $title-width - 2
+        font-family: 'Niconne', cursive
+        text-align: center
+        .day
+          font-size: $lll
+        .mounth
+          font-size: $ml
+        .year
+          font-size: $m
+        ul
+          padding: 16px 0 0 0
+        @media screen and (max-device-width: 480px)
+          width: 15%
+          .day
+            font-size: $ll
+          .mounth
+            font-size: $ss
+          .year
+            font-size: $sm
+          ul
+            padding: 10px 0 0 0
+    .body
+      font-size: $m
+      clear: both
+      background-color: $white
+      padding: $article-padding $article-padding 0 $article-padding
+      +clearfix
+      @media screen and (max-device-width: 480px)
+        word-break: break-all
+        line-height: 1.4
+        padding: 25px 10px
+      h2
+        font-size: $l
+        border-bottom: $light-gray solid 3px
+        margin: 0 0 25px 0
+        line-height: 1.5
+      p
+        line-height: 1.8
+        &.break
+          word-break: break-all
+          line-height: 1.4
+      ol,ul
+        list-style-position: outside
+        margin-left: 1.6em
+      ol
+        list-style: decimal
+      ul
+        list-style: disc
+      li
+        line-height: 1.6
+        margin: 0 0 0.6em 0
+      a
+        +text-link
+        &:link, &:visited
+          color: $dark-blue
+        &:hover, &:active
+          color: #00c0f0
+      p, dl, ul, ol, pre,dd
+        margin-bottom: 1.8em
+      dt
+        margin-bottom: 0.6em
+        &:before
+          content: "\002739"
+          margin: 0 5px 0 0
+      dd
+        margin-left: 1.5em 
+        font-size: $sm
+      dl
+        line-height: 1.6      
+      blockquote
+        background-color: $dark-white
+        background-image: url(images/body.gif)
+        display: block
+        padding: 0px 25px 0 65px
+        margin: 0 0 2em 0
+        font-style: italic
+        +clearfix
+        @media screen and (max-device-width: 480px)
+          padding: 0px 15px 0 65px
+      blockquote
+        &:before
+          content: "\00201c"
+          font-size: 120px
+          line-height: 1
+          display: block
+          margin: 0 0 -74px -60px
+          color: #ccc
+          font-style: normal
+          @media screen and (max-device-width: 480px)
+            font-size: 60px
+            margin: 0 0 -44px -50px
+      img
+        max-width: $main-width - ( ( $article-padding * 2 ) - ( 2 + $img-border-width ) )
+        @media screen and (max-device-width: 480px)
+          width: 100%
+      p.image
+        +article-img
+      table
+        font-size: $m
+    .footer
+      padding: $article-padding - 4
+      border-top: $ariticle-border
+      background: $white
+      font-size: $s
+      a
+        +text-link
+        &:link, &:visited
+          color: $dark-blue
+        &:hover, &:active
+          color: #00c0f0
+  #comment_wrapper
+    margin: -30px 0 0 0
+    padding: 0 20px
+    @media screen and (max-device-width: 480px)
+      margin: -10px 0 0 0
+    h2
+      font-size: $l
+      font-family: serif
+      font-weight: bold
+      line-height: 1.5
+      margin: 0 0 20px 0
+    li
+      margin: 0 0 35px 0
+      padding: 0 0 20px 0
+      display: block
+      +clearfix
+      border-bottom: $gray 1px dotted
+      p
+        font-size: $sm
+        line-height: 1.6
+      h3
+        font-size: $m
+        line-height: 1.6
+        margin: 0 0 18px 0
+        letter-spacing: 0
+        .date
+          font-size: $ss
+        .name
+          font-weight: bold
+          margin: 0 10px 0 0
+          a
+            +text-link  
+            color: $dark-blue
+    p
+      margin: 0 0 15px 0
+      label
+        font-size: $ss
+        line-height: 1.5
+      span
+        font-size: $ss
+        line-height: 1.5
+      input
+        width: 200px
+        +form-input
+       
+      textarea
+        +form-input
+        width: 100%
+        line-height: 1.5
+        font-size: $m  
+    .submit
+      text-align: center
+      input
+        width: 88px
+        display: block
+        margin: 0 auto
+        color: $white
+        font-size: $ss
+        background: #00c0f0
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYzBmMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMGFlZDkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+        background: -moz-linear-gradient(top, #00c0f0 0%, #00aed9 100%)
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00c0f0), color-stop(100%,#00aed9))
+        background: -webkit-linear-gradient(top, #00c0f0 0%,#00aed9 100%)
+        background: -o-linear-gradient(top, #00c0f0 0%,#00aed9 100%)
+        background: -ms-linear-gradient(top, #00c0f0 0%,#00aed9 100%)
+        background: linear-gradient(top, #00c0f0 0%,#00aed9 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c0f0', endColorstr='#00aed9',GradientType=0 )
+        box-shadow: inset #1bcffc 0 0 3px, #999 0 1px 1px
+        text-shadow: #0092b6 0 -1px 0
+        border: #01afdb solid 1px
+
+.breadcrumbs
+  background: $black
+  font-size: $ss
+  margin-bottom: 35px
+  padding: 4px
+  clear: both
+  @media screen and (max-device-width: 480px)
+    margin-bottom: 20px
+  li
+    display: inline
+    color: $dark-white
+    a
+      color: $dark-white
+      margin: 0 10px 0 0
+      text-decoration: none
+      &:after
+        content: '>'
+        margin-left: 1em 
+      &:link,
+      &:visited
+        color: $white
+      &:hover,
+      &:active
+        color: #ffe0d8
+
+
+body.about
+  #main
+    .article
+      .header
+        background-color: #f9f9f9
+        background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black)
+        background-size: 60px 60px
+        background-position: 0 0, 30px 30px
+        background-color: #f9f9f9
+        background-image: -webkit-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), -webkit-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff)
+        -webkit-background-size: 20px 20px
+        -webkit-background-position: 0 0, 20px 20px
+        .date
+          display: none
+
+
+#sub
+  width: $sub-width
+  float: right
+  font-size: $ss
+  margin: 60px 0
+  color: $light-black
+  @media screen and (max-device-width: 480px)
+    float: none
+    width: 100%
+    margin: 0
+  >div
+    margin: 0 0 25px 0
+    @media screen and (max-device-width: 480px)
+      div
+        border: $gray solid 1px
+        background: $white
+        margin: 0 0 25px 0
+        padding: 12px
+        +clearfix
+  h2
+    font-family: 'Niconne', cursive
+    font-size: $l
+    line-height: 1
+    margin: 0 0 10px 0
+  p
+    font-size: $ss
+    line-height: 1.5
+    margin: 0 0 15px 0
+  li
+    line-height: 1.3
+    margin: 0 0 10px 0
+    letter-spacing: 0
+  a.more
+    color: $accent
+    &:before
+      content: "> "
+  a
+    +text-link
+    color: $light-black
+  .search
+    button
+      display: none
+    input
+      +form-input
+      width: 100%
+    
+#footer
+  padding: 0 0 45px 0
+  margin-top: 30px
+  clear: both
+  font-size: $ss
+  line-height: 1.8
+  .body
+    +site-width
+    margin: 0 auto
+    text-align: center
+    color: $black
+    a
+      +text-link
+      color: $black
+.SnapABug_Button
+  @media screen and (max-device-width: 480px)
+    display: none !important
