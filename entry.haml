@@ -13,6 +13,7 @@
     - if logged_in?
       %p
         %a{:href => @entry.edit_link}= t('edit')
+
 - unless page?
   #comment_wrapper
     - if @entry.comments.size > 0
@@ -31,18 +32,15 @@
     #comment_form
       %form#comment_form{:action => @post.link, :method => "post"}
         :javascript
-          //
-            document.write('<input type="hidden" name="check" value="check" />');
-          //
-              %input{:name => "check", :type => "hidden", :value => "check"}
-          %p.name
-            %label{:for => "comment_name"} Name
-            %input#comment_name{:name => "comment[name]", :type => "text"}
-          %p.url
-            %label{:for => "comment_homepage"} URL
-            %span (option)
-            %input#comment_homepage{:name => "comment[homepage]", :type => "text"}
-          %p
-            %textarea#comment_body{:cols => "40", :name => "comment[body]", :rows => "10"}
-          %p.submit
-            %input.button{:type => "submit", :value => "Commment"}
+          document.write('<input type="hidden" name="check" value="check" />');
+        %p.name
+          %label{:for => "comment_name"} Name
+          %input#comment_name{:name => "comment[name]", :type => "text"}
+        %p.url
+          %label{:for => "comment_homepage"} URL
+          %span (option)
+          %input#comment_homepage{:name => "comment[homepage]", :type => "text"}
+        %p
+          %textarea#comment_body{:cols => "40", :name => "comment[body]", :rows => "10"}
+        %p.submit
+          %input.button{:type => "submit", :value => "Commment"}

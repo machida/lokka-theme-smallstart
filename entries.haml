@@ -26,11 +26,4 @@
             %a{:href => post.edit_link}= t('edit')
       .footer
         %p= link_to "#{t('comments')}(#{post.comments.size})", "#{post.link}#comment_wrapper"
-  .pager
-    %ul
-      - if @posts.pager.previous_page
-        %li.previous
-          %a{:href => "?page=#{@posts.pager.previous_page}"} Newer
-      - if @posts.pager.next_page
-        %li.next
-          %a{:href => "?page=#{@posts.pager.next_page}"} Older
+= @posts.pager.to_html(request.url)
