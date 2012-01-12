@@ -20,6 +20,8 @@
       = javascript_include_tag "#{@theme.path}/sh3init.js"
       %link{:href => "#{@theme.path}/shThemeLokka.css", :rel => "stylesheet", :type => "text/css"}
     %meta{:content => "width=device-width, height=device-height, initial-scale=1.0", :name => "viewport"}
+    %link{:href => "#{@theme.path}/images/home.png", :rel => "apple-touch-icon-precomposed"}
+    %link{:href => "#{@theme.path}/favicon.ico", :rel => "shortcut icon"}
   = header
   - if entry?
     %body{:class => "#{@theme_types.join(' ')} #{@entry.slug}"}
