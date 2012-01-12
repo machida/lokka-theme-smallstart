@@ -71,9 +71,9 @@ Lokkaで出来たCSM「[スモールスタート](http://blog.mat-aki.net/)」�
 
 コードスニペットは以下の用に書きます。
 
-&lt;pre class="brush: ruby"&gt;gem "heroku_backup_task", :git =&gt; "git://github.com/mataki/heroku_backup_task.git"  
-
-  &lt;/pre&gt;
+&lt;pre class="brush: ruby"&gt;
+gem "heroku_backup_task", :git =&gt; "git://github.com/mataki/heroku_backup_task.git"  
+&lt;/pre&gt;
 
 - - - - - -
 
