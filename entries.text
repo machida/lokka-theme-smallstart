@@ -1,0 +1,125 @@
+MA7 に向けて Happy Done というアプリを作りました！
+
+<p>BacklogのAPIを利用したサービスとして、Happy Doneというサービスを作りました！BacklogはNulabさんが提供している課題管理ツールです。</p>
+<p>以前、Pivotal Trackerでの開発をもっと楽しくするために課題が終わった時に音声で喝采を浴びせてくれるというRubyのスクリプトを作りました。</p>
+<p>
+  <a href="http://d.hatena.ne.jp/mat_aki/20100916/1284635001">http://d.hatena.ne.jp/mat_aki/20100916/1284635001</a>
+</p>
+<p>これはわざわざRubyのスクリプトを走らせないといけないという決定的な問題がありました。今回この問題を解決する + MA7に申し込むために、Chrome ExtensionでBacklogの課題の完了時に喝采をしてくれるというものに書き換えました。Chrome Extensionにすることによりブラウザを起動するだけで動作するようになるので、設定が非常に簡単になりました。</p>
+<p>Backlogを利用している方は、ぜひお試しください！課題を完了にするのが楽しくなることまちがいなし！今後は、Pivotal Trackerにも対応したいと思っています。</p>
+<h2>インストールはこちら</h2>
+<p class="break">
+  <a href="https://chrome.google.com/webstore/detail/gmljbkkdmaenpkmbkcmhojabmlbekpde">https://chrome.google.com/webstore/detail/gmljbkkdmaenpkmbkcmhojabmlbekpde</a>
+</p>
+<h2>設定方法</h2>
+<ol>
+  <li>まず、設定画面を開いてください。そこで入力項目がありますのでご自身のバックログのURLなどから適切に入力してください。</li>
+  <li>あとは、グレーアウトされているHappy Doneのボタンをクリックしていただければ定期的に最新情報を取得し、完了の課題があれば喝采を浴びせてくれるでしょう。</li>
+</ol>
+<h2>ソースコード</h2>
+<p>
+  <a href="https://github.com/mataki/happy-done">https://github.com/mataki/happy-done</a>
+</p>
+<p>pull request 待ってます。</p>
+
+==========
+
+youRoom の紹介ブログをまとめてみた。
+
+<p>SonicGardenで提供しているyouRoomがこれまでいくつかブログなどで紹介されているのをまとめてみる。</p>
+<dl>
+  <dt>札幌で働くフランス帰りのアパレル会社社長のBlog</dt>
+  <dd>
+    <a href="http://ameblo.jp/ishii-shouji/entry-11052463633.html" target="_blank">youRoomにブログのファン・ルームを作ってみた。</a>
+  </dd>
+  <dt>Chromeアプリ100</dt>
+  <dd>
+    <a href="http://chrome-100.com/youroom/" target="_blank">http://chrome-100.com/youroom/</a>
+  </dd>
+  <dt>WEBマーケティング ブログ</dt>
+  <dd>
+    <a href="http://web-marketing.zako.org/web-tools/best-discussion-tool-youroom.html" target="_blank">社内の情報共有が活性化するシンプルなツール「youRoom」</a>
+  </dd>
+  <dt>週アス PLUS</dt>
+  <dd>
+    <a href="http://weekly.ascii.jp/elem/000/000/055/55401/" target="_blank">Chromeでメーリングリストのようなコミュニティーをつくれる　youRoomで遊ぼう!!</a>
+  </dd>
+  <dt>ただのにっき</dt>
+  <dd>
+    <a href="http://sho.tdiary.net/20110707.html" target="_blank">Google+ vs Facebook: 「一方的で非対称なグループ」はむしろ普通だよ</a>
+  </dd>
+  <dt>続けるお気楽アウトプット</dt>
+  <dd>
+    <a href="http://ameblo.jp/outputter/entry-10770845944.html" target="_blank">youRoom をご存知ですか？</a>
+  </dd>
+  <dt>Publickey</dt>
+  <dd>
+    <a href="http://www.publickey1.jp/blog/10/youroom.html" target="_blank">企業向け無料マイクロブログ、日本人が開発した「youRoom」があった！ つぶやくだけで無料プランがグレードアップ</a>
+  </dd>
+  <dt>戦場クラスN戦闘記録</dt>
+  <dd>
+    <a href="http://class-niconico.blogspot.com/2010/12/youroom.html" target="_blank">合作に youRoom というサービスが使えそう</a>
+  </dd>
+  <dt>組織開発のアガトン・コンサルティングのブログ</dt>
+  <dd>
+    <a href="http://ameblo.jp/agathon/entry-10741915631.html" target="_blank">情報共有はyouRoomで決まり</a>
+  </dd>
+  <dt>社内SNSとメールの棲み分け</dt>
+  <dd>
+    <a href="http://ameblo.jp/agathon/entry-10730106284.html" target="_blank">http://ameblo.jp/agathon/entry-10730106284.html</a>
+  </dd>
+  <dl></dl>
+</dl>
+
+==========
+
+acts_as_flexigrid リリースしました
+
+<p>jQuery pluginのTableをソートできたりページングしたりするものってたくさんありますよね。</p>
+<p>今、その中でもシンプルで良さ気なプラグインの <a href="http://flexigrid.info/" target="_blank">Flexigrid</a> というものを利用しています。</p>
+<p>Railsで利用する上で簡単に導入できるように表示用のjsonを返す事ができるようにするメソッドを定義するRailsプラグインを書いてみました。</p>
+<ul>
+  <li>
+    <a href="https://github.com/mataki/acts_as_flexigrid" target="_blank">https://github.com/mataki/acts_as_flexigrid</a>
+  </li>
+  <li>
+    <a href="https://rubygems.org/gems/acts_as_flexigrid" target="_blank">https://rubygems.org/gems/acts_as_flexigrid</a>
+  </li>
+</ul>
+<p>使い方は<a href="https://github.com/mataki/acts_as_flexigrid/blob/master/README.rdoc" target="_blank">README</a>にあるので、それを見ていただければと思います。これを使えば簡単にしゃれた使いやすいテーブルを作成できますよ。</p>
+
+==========
+
+Herokuで定期バックアップを無料で簡単に取得する方法
+
+<p>HerokuでPostgresを利用しているとバックアップの仕組みなどが最初からアドオンで提供されており非常に便利です。PG BackupというAddonですね。</p>
+<p>
+  <a href="http://addons.heroku.com/pgbackups" target="_blank">http://addons.heroku.com/pgbackups</a>
+</p>
+<p>このAddonは、現在バックアップの定期取得がプライベートベータで公開されています。おそらく、申し込めば利用できるのですが現在公開されている有料版のプランでも$30/月となっており定期取得もリリースされたとしても少し割高に感じます。</p>
+<p>また、このアドオンを利用した場合herokuが管理しているAmazon S3の領域にファイルがバックアップされます。このURLはherokuコマンドを打つことで、ダウンロードURLを取得できるのですが、バックアップを利用する時というのはおそらくHeroku自体がダウンした時になるはずでそのときにherokuコマンドを発行できるのかというと疑問です。そのため自分のS3の領域にそのバックアップファイルを移動させておくほうが安全であると思っています。</p>
+<p>そこで、HerokuのDaily cronのAddonを利用して、定期取得する仕組みが公開されていたので、それを改良してさらに自分のS3の領域にバックアップをコピーする仕組みを作ってみました。</p>
+<dl>
+  <dt>元のgem</dt>
+  <dd>
+    <a href="https://github.com/joemsak/heroku_backup_task" target="_blank">https://github.com/joemsak/heroku_backup_task</a>
+  </dd>
+  <dt>僕が作ったgem</dt>
+  <dd>
+    <a href="https://github.com/mataki/heroku_backup_task" target="_blank">https://github.com/mataki/heroku_backup_task</a>
+  </dd>
+</dl>
+<p>コードの変更は以下の行とファイルを追加します。</p>
+<h2>Gemfile</h2>
+<pre class="brush: ruby">
+gem "heroku_backup_task", :git =&gt; "git://github.com/mataki/heroku_backup_task.git"
+</pre>
+<h2>lib/tasks/cron.rake</h2>
+<pre class="brush: ruby">
+require "heroku_backup_task/tasks"&#x000A;task :cron =&gt;
+:heroku_backup_and_store_s3 if Rails.env.production?
+</pre>
+<p>簡単ですね。</p>
+<p>後はherokuコマンドでaddonとconfigを追加すればOKです。Amazonのキーとbacketを設定してください。</p>
+<pre class="brush: ruby">heroku addons:add cron:daily&#x000A;heroku config:add AWS_S3_SECRET_KEY="xxxx" AWS_S3_KEY_ID="xxxx" BACKUP_BACKET="backet-name"%p 以上で、設定は完了です。</pre>
+<p>これで日次で設定したS3のバケットに b001.dump という感じでファイルがどんどん保存されていきます。これでherokuが障害で操作不能に陥ってもデータを取り出すことができますね。</p>
