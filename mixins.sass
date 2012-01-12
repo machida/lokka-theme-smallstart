@@ -1,0 +1,132 @@
+=clearfix
+  &:before
+    content: ""
+    display: table
+  &:after
+    content: ""
+    display: table
+    clear: both
+  zoom: 1
+
+
+=border_radius($allRadius: "null", $top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0)
+  @if $allRadius != "null"
+    -moz-border-radius: $allRadius
+    -webkit-border-radius: $allRadius
+    border-radius: $allRadius
+  @else
+    $eachCorner: top-left, top-right, bottom-right, bottom-left
+    $MozTBLR: ""
+    $radius: ""
+    @each $corner in $eachCorner
+      @if $corner == top-left
+        $MozTBLR: topleft
+        $radius: $top-left
+      @else if $corner == top-right
+        $MozTBLR: topright
+        $radius: $top-right
+      @else if $corner == bottom-left
+        $MozTBLR: bottomleft
+        $radius: $bottom-left
+      @else if $corner == bottom-right
+        $MozTBLR: bottomright
+        $radius: $bottom-right
+      -moz-border-radius#{-$MozTBLR}: $radius
+      -webkit-border#{-$corner}-radius: $radius
+      border#{-$corner}-radius: $radius
+
+
+=gradient($gradient-img: "null", $top-color: 0, $bottom-color: 0)
+  @if $gradient-img != "null"  
+    background: $gradient-img, $top-color
+    background: $gradient-img, -moz-linear-gradient(top, $top-color 0%, $bottom-color 100%)
+    background: $gradient-img, -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top-color), color-stop(100%, $bottom-color))
+    background: $gradient-img, -webkit-linear-gradient(top, $top-color 0%, $bottom-color 100%)
+    background: $gradient-img, -o-linear-gradient(top, $top-color 0%, $bottom-color 100%)
+    background: $gradient-img, -ms-linear-gradient(top, $top-color 0%, $bottom-color 100%)
+    filter: $gradient-img, progid:DXImageTransform.Microsoft.gradient(startColorstr= $top-color, endColorstr= $bottom-color,GradientType=0 )
+    background: $gradient-img, linear-gradient(top, $top-color 0%, $bottom-color 100%)    
+  @else
+    background: $top-color
+    background: -moz-linear-gradient(top, $top-color 0%, $bottom-color 100%)
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top-color), color-stop(100%, $bottom-color))
+    background: -webkit-linear-gradient(top, $top-color 0%, $bottom-color 100%)
+    background: -o-linear-gradient(top, $top-color 0%, $bottom-color 100%)
+    background: -ms-linear-gradient(top, $top-color 0%, $bottom-color 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= $top-color, endColorstr= $bottom-color,GradientType=0 )
+    background: linear-gradient(top, $top-color 0%, $bottom-color 100%)
+
+=box-shadow($box-shadow-value1:"null", $box-shadow-value2:"null", $box-shadow-value3:"null")
+  @if $box-shadow-value2 != "null"  
+    box-shadow: $box-shadow-value1, $box-shadow-value2
+    -webkit-box-shadow: $box-shadow-value1, $box-shadow-value2
+    -moz-box-shadow: $box-shadow-value1, $box-shadow-value2
+    -o-box-shadow: $box-shadow-value1, $box-shadow-value2  
+  @else if $box-shadow-value3 != "null"
+    box-shadow: $box-shadow-value1, $box-shadow-value2 ,$box-shadow-value3
+    -webkit-box-shadow: $box-shadow-value1, $box-shadow-value2 ,$box-shadow-value3
+    -moz-box-shadow: $box-shadow-value1, $box-shadow-value2 ,$box-shadow-value3
+    -o-box-shadow: $box-shadow-value1, $box-shadow-value2 ,$box-shadow-value3
+  @else
+    box-shadow: $box-shadow-value1
+    -webkit-box-shadow: $box-shadow-value1
+    -moz-box-shadow: $box-shadow-value1
+    -o-box-shadow: $box-shadow-value1
+    
+=text-shadow($text-shadow-value1:"null",$text-shadow-value2:"null",$text-shadow-value3:"null")
+  @if $text-shadow-value2 != "null"
+    box-shadow: $text-shadow-value1, $text-shadow-value2 ,$text-shadow-value3
+    -webkit-box-shadow: $text-shadow-value1, $text-shadow-value2 ,$text-shadow-value3
+    -moz-box-shadow: $text-shadow-value1, $text-shadow-value2 ,$text-shadow-value3
+    -o-box-shadow: $text-shadow-value1, $text-shadow-value2 ,$text-shadow-value3
+  @else if $text-shadow-value3 != "null"
+    box-shadow: $text-shadow-value1, $text-shadow-value2
+    -webkit-box-shadow: $text-shadow-value1, $text-shadow-value2
+    -moz-box-shadow: $text-shadow-value1, $text-shadow-value2
+    -o-box-shadow: $text-shadow-value1, $text-shadow-value2
+  @else
+    box-shadow: $text-shadow-value1
+    -webkit-box-shadow: $text-shadow-value1
+    -moz-box-shadow: $text-shadow-value1
+    -o-box-shadow: $text-shadow-value1
+
+=site-width
+  width: $main-width
+  @media screen and (max-device-width: 480px)
+    width: 100%
+=main
+  +site-width
+  float: left
+  @media screen and (max-device-width: 480px)
+    float: none
+=text-link
+  &:link,
+  &:visited
+    text-decoration: none
+  &:hover,
+  &:active
+    text-decoration: underline
+=form-input
+  border-radius: $button-radius
+  -webkit-border-radius: $button-radius
+  -moz-border-radius: $button-radius
+  -o-border-radius: $button-radius
+  border: #c6cdd2 solid 1px
+  padding: 0
+  margin: 0
+  width: 100%
+  box-shadow: inset #ccc 0 1px 1px, #fff 0 1px 1px
+  -webkit-box-shadow: inset #ccc 0 1px 1px, #fff 0 1px 1px
+  line-height: 24px
+  font-size: $m
+=article-img
+  img
+    border: $dark-white solid $img-border-width
+    max-width: $main-width - ( ( $article-padding * 2 ) + ( 2 * $img-border-width ) + 2px )
+    @media screen and (max-device-width: 480px)
+      width: 100%
+      border: none
+=break
+  word-break: break-all
+  line-break: strict
+  word-wrap: break-word
