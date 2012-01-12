@@ -15,7 +15,9 @@ Lokkaで出来たCSM「[スモールスタート](http://blog.mat-aki.net/)」�
 使えるマークアップ
 ---------
 
-マークアップ方法は以下になります（text.txtにサンプルがあります）。
+マークアップ方法は以下になります（※text.txtにサンプルがあります）。
+
+- - - - - -
 
 &lt;p&gt;普通の文章&lt;/p&gt;
 
@@ -69,9 +71,9 @@ Lokkaで出来たCSM「[スモールスタート](http://blog.mat-aki.net/)」�
 
 コードスニペットは以下の用に書きます。
 
-&lt;pre class="brush: ruby"&gt;gem "heroku_backup_task", :git =&gt; "git://github.com/mataki/heroku_backup_task.git"  
-
-  &lt;/pre&gt;
+&lt;pre class="brush: ruby"&gt;
+gem "heroku_backup_task", :git =&gt; "git://github.com/mataki/heroku_backup_task.git"  
+&lt;/pre&gt;
 
 - - - - - -
 
